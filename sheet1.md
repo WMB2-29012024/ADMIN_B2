@@ -4,7 +4,7 @@
 
 > ## Psuedo Code
 
-**To solve this problem in JavaScript, you can follow these steps:**
+**To solve this problem, you can follow these steps:**
 
 - Initialize a variable to keep track of the count of employees meeting the target hours.
 - Iterate to hours array to get each employee's hours
@@ -17,7 +17,7 @@
 
 > ## Psuedo Code
 
-**To solve this problem in JavaScript, you can follow these steps:**
+**To solve this problem, you can follow these steps:**
 
 - Initialize a pointer j at the end of the string.
 - Iterate through the first half of the string.
@@ -32,7 +32,7 @@
 
 > ## Psuedo Code
 
-**To solve this problem in JavaScript, you can follow these steps:**
+**To solve this problem, you can follow these steps:**
 
 - Define a function called argumentsLength.
 - Initialize a variable count to 0 to keep track of the number of arguments.
@@ -46,7 +46,7 @@
 
 > ## Psuedo Code
 
-**To solve this problem in JavaScript, you can follow these steps:**
+**To solve this problem, you can follow these steps:**
 
 **Utils**
 
@@ -59,7 +59,7 @@
 
 > ## Psuedo Code
 
-**To solve this problem in JavaScript, you can follow these steps:**
+**To solve this problem, you can follow these steps:**
 
 **Note :** Do not use any built-in method ( excluding `charAt` & `length` )
 
@@ -72,7 +72,7 @@
 
 > ## Psuedo Code
 
-**To solve this problem in JavaScript, you can follow these steps:**
+**To solve this problem, you can follow these steps:**
 
 - Initialize min_price to infinity and max_profit to 0.
 - Loop through each price in the array:
@@ -86,7 +86,7 @@
 
 > ## Psuedo Code
 
-**To solve this problem in JavaScript, you can follow these steps:**
+**To solve this problem, you can follow these steps:**
 
 - Create a function that takes a string `s` as input.
 - Initialize an empty object to store the count of each character in the string.
@@ -101,7 +101,7 @@
 
 > ## Psuedo Code
 
-**To solve this problem in JavaScript, you can follow these steps:**
+**To solve this problem, you can follow these steps:**
 
 - Start by creating an empty object to track seen characters.
 - Loop through each character in the input string.
@@ -116,7 +116,7 @@
 
 > ## Psuedo Code
 
-**To solve this problem in JavaScript, you can follow these steps:**
+**To solve this problem, you can follow these steps:**
 
 - Loop through the array `nums` and check each element against its index modulo 10.
 - If the condition `i mod 10 == nums[i]` is satisfied for any index `i`, return that index.
@@ -128,7 +128,7 @@
 
 > ## Psuedo Code
 
-**To solve this problem in JavaScript, you can follow these steps:**
+**To solve this problem, you can follow these steps:**
 
 - Check if all letters in the word are uppercase. If they are, return true.
 - Check if all letters in the word are lowercase. If they are, return true.
@@ -141,7 +141,7 @@
 
 > ## Psuedo Code
 
-**To solve this problem in JavaScript, you can follow these steps:**
+**To solve this problem, you can follow these steps:**
 
 - Split the input string into an array of words.
 - Iterate over each word in the array.
