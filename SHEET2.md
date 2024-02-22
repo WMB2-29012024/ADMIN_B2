@@ -5,7 +5,7 @@ Given two string arrays word1 and word2, return true if the two arrays represent
 Input: word1 = ["ab", "c"], word2 = ["a", "bc"]
 Output: true
 
-pseudo code:- 
+pseudo code:-  
 
 step 1: create two variable wordcount1 and wordcount2 and initialize with blank (wordStr1="" and wordStr2="") string, then
 step 2: iterate over word1[] and concatinate every index word1[i] in wordStr1=wordStr1+word1[i]
