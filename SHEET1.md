@@ -143,7 +143,7 @@
 
 **To solve this problem, you can follow these steps:**
 
-- Split the input string into an array of words.
+- Split the input string into an array of words. (Need more details)
 - Iterate over each word in the array.
 - For each word, check its length.
 - If the length is 1 or 2, convert the word to lowercase.
