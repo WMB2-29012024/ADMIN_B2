@@ -151,7 +151,6 @@
 - Join the modified words back into a string.
 - Return the capitalized title.
 
-
 # Problem 11
 
 [2129. Capitalize the Title](https://leetcode.com/problems/capitalize-the-title/)
@@ -168,7 +167,6 @@
 - Join the modified words back into a string.
 - Return the capitalized title.
 
-
 # Problem 12
 
 [709. To Lower Case](https://leetcode.com/problems/to-lower-case/)
@@ -177,13 +175,14 @@
 
 **To solve this problem in JavaScript, you can follow these steps:**
 
+- Initialize an empty string `str` to store the converted string
 - Iterate through each character in the input string.
+- Store the character at the current index `i` of the input string `s` and assigns it to the variable `ch`
 - Check if the character is an uppercase letter using its ASCII code.
-- If the character is uppercase, convert it to lowercase using ASCII manipulation.
+- If the character is uppercase, it converts it to lowercase by adding 32 to its character code (this is the difference between the ASCII codes of uppercase and lowercase letters) and then converting it back to a character using `String.fromCharCode()`.
 - Otherwise, keep the character unchanged.
 - Concatenate the modified characters to form the resulting string.
 - Return the resulting string.
-
 
 # Problem 13
 
@@ -193,14 +192,12 @@
 
 **To solve this problem, you can follow these steps:**
 
-- **While loop**: The function enters a while loop as long as the length of the string `s` is greater than `k`.
-- **Dividing the string into groups**: Inside the while loop, the string `s` is divided into consecutive groups of size `k`. This is done by looping through the string and extracting substrings of length `k`.
--  **Summing the digits of each group**: Calculates the sum of digits in that string. It iterates through each character of the string, converts it to an integer using `parseInt`, and adds it to the variable `sum`.
--  **Forming a new string**: The sums obtained from each group are concatenated to form a new string `newString`.
--  **Updating the string**: The original string `s` is updated to the new string `newString`.
--  **Returning the result**: Once the length of the string becomes less than or equal to `k`, the function returns the modified string `s`.
-Overall, this solution repeatedly divides the input string into groups of size `k`, calculates the sum of digits for each group, and forms a new string with these sums until the length of the string becomes less than or equal to `k`, at which point the modified string is returned.
-
+- Start a while loop, that continues until the length of string s is greater than k. It ensures that the length of the string is reduced to k digits or less.
+- Initializes an empty string `newString` to store the concatenated digits and an empty array groups to store the groups of `k` digits.
+- Iterate over the string `s` in steps of `k`, pushing substrings of length `k` into the groups array.
+- Iterate over each group of digits in groups, converts them to integers using parseInt, and append them to the `newString`.
+- Updates the value of `s` with the concatenated digits stored in newString.
+- Once the length of `s` is reduced to k digits or less, the function returns the modified string `s`.
 
 # Problem 14
 
@@ -210,14 +207,13 @@ Overall, this solution repeatedly divides the input string into groups of size `
 
 **To solve this problem, you can follow these steps:**
 
--  Initialize a variable `sum` to store the sum of the digits. Set it to 0.
+- Initialize a variable `sum` to store the sum of the digits. Set it to 0.
 - Convert the input number `n` to a string using the `toString()` method and store it in the variable `str`. This allows easier access to individual digits.
--  Iterate through each character in the string representation of `n` using a for loop.
+- Iterate through each character in the string representation of `n` using a for loop.
 - Inside the loop:
-    -   Convert the character at the current index `i` back to an integer using `parseInt(str.charAt(i))`. Store this value in the variable `num`.
-    -   Check if the index `i` is even or odd by checking the remainder when divided by 2 (`i % 2`). If `i` is odd (not divisible by 2), subtract the current digit `num` from the `sum`. Otherwise (if `i` is even), add `num` to the `sum`.
+  - Convert the character at the current index `i` back to an integer using `parseInt(str.charAt(i))`. Store this value in the variable `num`.
+  - Check if the index `i` is even or odd by checking the remainder when divided by 2 (`i % 2`). If `i` is odd (not divisible by 2), subtract the current digit `num` from the `sum`. Otherwise (if `i` is even), add `num` to the `sum`.
 - After iterating through all the digits, return the final `sum`.
-
 
 # Problem 15
 
@@ -227,17 +223,16 @@ Overall, this solution repeatedly divides the input string into groups of size `
 
 **To solve this problem, you can follow these steps:**
 
--  Initializes a variable `steps` to keep track of the number of steps needed to reduce `num` to zero.
+- Initializes a variable `steps` to keep track of the number of steps needed to reduce `num` to zero.
 - Start a while loop that continues as long as `num` is greater than 0. The loop will terminate when `num` becomes 0.
--  Checks if `num` is even or not by using the modulo operator `%`.
-    - If `num` is even, it is divided by 2. This operation effectively reduces `num` by half.
-    - If `num` is odd, it means that subtracting 1 from `num` will make it even. So, in this case, 1 is subtracted from `num`.
--  Increments the `steps` variable by 1 in each iteration of the loop. It counts how many steps are taken to reduce `num` to 0.
+- Checks if `num` is even or not by using the modulo operator `%`.
+  - If `num` is even, it is divided by 2. This operation effectively reduces `num` by half.
+  - If `num` is odd, it means that subtracting 1 from `num` will make it even. So, in this case, 1 is subtracted from `num`.
+- Increments the `steps` variable by 1 in each iteration of the loop. It counts how many steps are taken to reduce `num` to 0.
 - Once the loop terminates (when `num` becomes 0), return step.
-In summary, this function calculates the number of steps required to reduce a given number `num` to 0 by following two rules:
--   If `num` is even, divide it by 2.
--   If `num` is odd, subtract 1 from it.
-
+  In summary, this function calculates the number of steps required to reduce a given number `num` to 0 by following two rules:
+- If `num` is even, divide it by 2.
+- If `num` is odd, subtract 1 from it.
 
 # Problem 16
 
@@ -247,11 +242,10 @@ In summary, this function calculates the number of steps required to reduce a gi
 
 **To solve this problem, you can follow these steps:**
 
--  Initializes a variable `i` to start from `1`. This variable `i` will be used to find multiples of `n`.
+- Initializes a variable `i` to start from `1`. This variable `i` will be used to find multiples of `n`.
 - Start an infinite loop. This loop will keep running until a `return` statement is executed, breaking the loop.
--  Check if the product of `n` and `i` is divisible by 2 (i.e., if it's an even number).
--   If the condition is true, returns the value of `n*i`, which is the smallest multiple of `n` that is also an even number.
-
+- Check if the product of `n` and `i` is divisible by 2 (i.e., if it's an even number).
+- If the condition is true, returns the value of `n*i`, which is the smallest multiple of `n` that is also an even number.
 
 # Problem 17
 
@@ -260,9 +254,43 @@ In summary, this function calculates the number of steps required to reduce a gi
 > ## Psuedo Code
 
 **To solve this problem, you can follow these steps:**
--  Initializes a variable `count` to keep track of the number of divisors found.
--  Start a loop that iterates from `1` to `n`.
--  Checks if the current number (`i`) divides `n` evenly (i.e., with no remainder) using the condition `n % i === 0`. If the condition is true, it means that `i` is a divisor of `n`, so it increments the `count` variable by 1.
+
+- Initialize a variable `count` to keep track of the number of divisors found.
+- Start a loop that iterates from `1` to `n`.
+- Checks if the current number (`i`) divides `n` evenly (i.e., with no remainder) using the condition `n % i === 0`. If the condition is true, it means that `i` is a divisor of `n`, so it increments the `count` variable by 1.
 - Finally, returns `true` if `count` is `3`, indicating that `n` has exactly three divisors; otherwise, it returns `false`.
+  In summary, the function determines if a given number `n` has exactly three divisors by counting the number of divisors it has and checking if that count equals `3`.
+
+# Problem 18
+
+[1979. Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/)
+
+> ## Psuedo Code
+
+**To solve this problem, you can follow these steps:**
+
+- Initializes a variable `count` to keep track of the number of divisors found.
+- Start a loop that iterates from `1` to `n`.
+- Checks if the current number (`i`) divides `n` evenly (i.e., with no remainder) using the condition `n % i === 0`. If the condition is true, it means that `i` is a divisor of `n`, so it increments the `count` variable by 1.
+- Finally, returns `true` if `count` is `3`, indicating that `n` has exactly three divisors; otherwise, it returns `false`.
+
 In summary, the function determines if a given number `n` has exactly three divisors by counting the number of divisors it has and checking if that count equals `3`.
 
+# Problem 19
+
+[2553. Separate the Digits in an Array](https://leetcode.com/problems/separate-the-digits-in-an-array/)
+
+> ## Psuedo Code
+
+**To solve this problem, you can follow these steps:**
+
+- Initialize an empty array `answer` to store the separate digits extracted from the numbers in the input array.
+- Iterates over each number `num` in the input array `nums`.
+- Initialize a variable `n` to store the current number being processed.
+- Initialize an empty array `digits` to store the digits of the current number.
+- Start a loop that, continues until `n` becomes 0.
+  - Inside the loop, calculate the last digit of `n` using the modulus operator (`n % 10`) and adds it to the beginning of the `digits` array.
+  - Then, update `n` by removing the last digit using `Math.floor(n / 10)`.
+- After extracting all the digits of the current number, push these digits into the `answer` array.
+- Once all numbers in the input array have been separated, return the `answer` array.
+- Summary : This function takes an array of numbers as input, separates the digits of each number, and returns an array containing all the separate digits extracted from the input numbers. It accomplishes this by iterating over each number, extracting its digits, and storing them in a separate array, which is then concatenated into the final result.
