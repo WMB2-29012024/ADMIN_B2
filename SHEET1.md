@@ -294,3 +294,142 @@ In summary, the function determines if a given number `n` has exactly three divi
 - After extracting all the digits of the current number, push these digits into the `answer` array.
 - Once all numbers in the input array have been separated, return the `answer` array.
 - Summary : This function takes an array of numbers as input, separates the digits of each number, and returns an array containing all the separate digits extracted from the input numbers. It accomplishes this by iterating over each number, extracting its digits, and storing them in a separate array, which is then concatenated into the final result.
+
+# Problem 19
+
+[1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence](https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/description/)
+
+/\*\*
+
+- @param {string} sentence
+- @param {string} searchWord
+- @return {number}
+  \*/
+  var isPrefixOfWord = function(sentence, searchWord) {
+  sentenceArr = splitSentence(sentence);
+  // sentenceArr = sentence.split(" ");
+  for (let i = 0; i < sentenceArr.length; i++ ) {
+  let isPrefix = true;
+  for (let j = 0; j < searchWord.length; j++) {
+  if (sentenceArr[i][j] !== searchWord[j]) {
+  isPrefix = false;
+  break;
+  }
+  }
+  if (isPrefix) {
+  return i+1;
+  }
+  }
+  return -1;
+  };
+
+function splitSentence(sentence) {
+const words = [];
+let word = '';
+
+    for (let i = 0; i < sentence.length; i++) {
+        const char = sentence[i];
+
+        if (char === ' ') {
+            if (word !== '') {
+                words.push(word);
+                word = '';
+            }
+        } else {
+            word += char;
+        }
+    }
+
+    if (word !== '') {
+        words.push(word);
+    }
+
+    return words;
+
+}
+
+# Problem 20
+
+[1961. Check If String Is a Prefix of Array](https://leetcode.com/problems/check-if-string-is-a-prefix-of-array/description/)
+
+/\*\*
+
+- @param {string} s
+- @param {string[]} words
+- @return {boolean}
+  \*/
+  var isPrefixString = function(s, words) {
+  str = "";
+  if(words[0]!== s.substring(0,words[0].length)) return false;
+  for(let i = 0; i < words.length; i++){
+  str += words[i];
+  console.log(str)
+  if (str===s) return true
+  }
+  return false;
+  };
+
+# Problem 21
+
+[520. Detect Capital](https://leetcode.com/problems/detect-capital/description/)
+
+/\*\*
+
+- @param {string} word
+- @return {boolean}
+  \*/
+  var detectCapitalUse = function(word) {
+  if(myToLowerCase(word)===word) return true;
+  if(myToUpperCase(word)===word) return true;
+  const capitalChar = myToUpperCase(word[0]) + myToLowerCase(mySubstring(word,1));
+  if(capitalChar===word) return true;
+  return false;
+  };
+
+var myToLowerCase = function(s) {
+let str = "";
+for (let i = 0; i < s.length; i++) {
+let ch = s.charCodeAt(i);
+if (ch > 64 && ch < 91) {
+str = str + String.fromCharCode(ch + 32);
+}else{
+str = str + s[i];
+}
+}
+return str;
+};
+
+var myToUpperCase = function(s) {
+let str = "";
+for (let i = 0; i < s.length; i++) {
+let ch = s.charCodeAt(i);
+if (ch > 96 && ch < 123) {
+str = str + String.fromCharCode(ch - 32);
+}else{
+str = str + s[i];
+}
+}
+return str;
+};
+
+var mySubstring = function(s,idx,end=s.length) {
+let str = "";
+for(let i = idx; i < end; i++){
+str += s[i]
+}
+return str ;
+}
+
+# Problem 22
+
+[26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
+
+var removeDuplicates = function(nums) {
+let count = 0;
+for (let i = 0; i < nums.length; i++) {
+if (i === 0 || nums[i] !== nums[i - 1]) {
+nums[count++] = nums[i];
+}
+}
+return count;
+};
