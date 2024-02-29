@@ -1,0 +1,2009 @@
+<!-- 26. Remove Duplicates from Sorted Array -->
+<!-- 
+Initialize a variable count to store the count of unique elements.
+Iterate through each element num in the array nums.
+Check if the current element nums[i] is either the first element of the array (i === 0) or if it is different from the previous element nums[i - 1]. This condition checks for uniqueness.
+Inside the if block, if the condition is true (indicating a unique element), assign the current element nums[i] to the array at index count, and then increments count by 1.
+After processing all elements of the array, return the value of count, which represents the number of unique elements in the modified nums array.
+ -->
+<!-- 
+    var removeDuplicates = function(nums) {
+    let uniqueIndex = 1;
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] !== nums[i - 1]) {
+            nums[uniqueIndex] = nums[i];
+            uniqueIndex++;
+        }
+    }
+    return uniqueIndex;
+};
+  -->
+<ol>
+  <li></li>
+</ol>
+<ol>
+  <li>Initialize a variable count to store the count of unique elements.</li>
+  <li>Iterate through each element num in the array nums.</li>
+  <li>
+    Check if the current element nums[i] is either the first element of the
+    array (i === 0) or if it is different from the previous element nums[i - 1].
+    This condition checks for uniqueness.
+  </li>
+  <li>
+    Inside the if block, if the condition is true (indicating a unique element),
+    assign the current element nums[i] to the array at index count, and then
+    increments count by 1.
+  </li>
+  <li>
+    After processing all elements of the array, return the value of count, which
+    represents the number of unique elements in the modified nums array.
+  </li>
+</ol>
+
+<!-- 520. Detect Capital-->
+<!-- 
+Check if the word is entirely in lowercase by comparing it with the result of myToLowerCase(word). If so, return true.
+Check if the word is entirely in uppercase by comparing it with the result of myToUpperCase(word). If so, returns true.
+If the word doesn't match either of these conditions, constructs a word with the first letter capitalized and the rest in lowercase. 
+Compare the constructed word with the original word. If they match, returns true.
+myToLowerCase Function:
+Defines a function named myToLowerCase that takes a string s as input.
+Initializes an empty string str to store the result of converting the input string to lowercase.
+for (let i = 0; i < s.length; i++) { ... }: This for loop iterates over each character in the input string s.
+Converting Characters to Lowercase:
+let ch = s.charCodeAt(i);: Retrieves the ASCII code of the current character at index i in the string s.
+if (ch > 64 && ch < 91) { ... }: Checks if the ASCII code corresponds to an uppercase letter (ASCII range for uppercase letters).
+If the character is uppercase, it converts it to lowercase by adding 32 to its ASCII code (ch + 32) and then converts the resulting ASCII code back to its corresponding character using String.fromCharCode.
+Appends the converted lowercase character to the str string.
+else { ... }: If the character is not an uppercase letter, it appends the character as is to the str string.
+Return Value:
+After iterating over all characters in the input string, the function returns the modified str string containing the input string converted to lowercase characters where applicable.
+ -->
+
+<ol>
+  <li>
+    Check if the word is entirely in lowercase by comparing it with the result
+    of myToLowerCase(word). If so, return true.
+  </li>
+  <li>
+    Check if the word is entirely in uppercase by comparing it with the result
+    of myToUpperCase(word). If so, returns true.
+  </li>
+  <li>
+    If the word doesn't match either of these conditions, constructs a word with
+    the first letter capitalized and the rest in lowercase.
+  </li>
+  <li>
+    Compare the constructed word with the original word. If they match, returns
+    true.
+  </li>
+  <li>Return false if none of the condition match</li>
+  <ul>
+    <li>myToLowerCase Function:</li>
+    <li>
+      Defines a function named myToLowerCase that takes a string s as input.
+    </li>
+    <li>
+      Initializes an empty string str to store the result of converting the
+      input string to lowercase.
+    </li>
+    <li>
+      for (let i = 0; i < s.length; i++) { ... }: This for loop iterates over
+      each character in the input string s.Converting Characters to Lowercase:
+    </li>
+    <li>
+      let ch = s.charCodeAt(i);: Retrieves the ASCII code of the current
+      character at index i in the string s.
+    </li>
+    <li>
+      if (ch > 64 && ch < 91) { ... }: Checks if the ASCII code corresponds to
+      an uppercase letter (ASCII range for uppercase letters).
+    </li>
+    <li>
+      If the character is uppercase, it converts it to lowercase by adding 32 to
+      its ASCII code (ch + 32) and then converts the resulting ASCII code back
+      to its corresponding character using String.fromCharCode.
+    </li>
+    <li>Appends the converted lowercase character to the str string.</li>
+    <li>
+      else { ... }: If the character is not an uppercase letter, it appends the
+      character as is to the str string.
+    </li>
+    <li>Return Value:</li>
+    <li>
+      After iterating over all characters in the input string, the function
+      returns the modified str string containing the input string converted to
+      lowercase characters where applicable.
+    </li>
+  </ul>
+</ol>
+
+<!-- 2129. Capitalize the Title-->
+<!-- 
+
+ -->
+<ol>
+  <li>Split the input string into an array of words.</li>
+  <li>Iterate over each word in the array.</li>
+  <li>For each word, check its length.</li>
+  <li>If the length is 1 or 2, convert the word to lowercase.</li>
+  <li>
+    Otherwise, capitalize the first letter and convert the rest to lowercase.
+  </li>
+  <li>Concatenate the modified words back into a string.</li>
+  <li>Return the capitalized title.</li>
+</ol>
+
+<ol>
+  <li>Initialize a variable uniqueIndex to 1.</li>
+  <li>
+    Iterate over each index i in the range from 1 to the length of nums - 1.(for
+    i from 1 to nums.length - 1)
+  </li>
+  <li>
+    Compare the element at index i with the element at index (i - 1).(if nums[i]
+    is not equal to nums[i - 1])
+  </li>
+  <li>
+    Assign the element at index i to the element at index uniqueIndex in the
+    nums array.(nums[uniqueIndex] = nums[i])
+  </li>
+  <li>Increment the value of uniqueIndex by 1.(uniqueIndex++)</li>
+  <li>Return the value of uniqueIndex.</li>
+</ol>
+
+<ol>
+  <li>
+    Inside the inner function, return the current value of n and then increment
+    n by 1.
+  </li>
+  <li>
+    Each time the counter function is called, it will return the current value
+    of n and then increment it for the next call.
+  </li>
+</ol>
+
+<ol>
+  <li>
+    const shuffled = [];: Initializes an empty array called shuffled. This array
+    will store characters from the string s based on the indices specified in
+    indices.
+  </li>
+  <li>
+    let str = "";: Initializes an empty string str. This string will hold the
+    final shuffled string.
+  </li>
+  <li>
+    for (let i = 0; i < s.length; i++) { shuffled[indices[i]] = s[i]; }: This
+    loop iterates over each character in the string s. It assigns the character
+    at index i of s to the index specified by indices[i] in the shuffled array.
+    This effectively shuffles the characters of s based on the order specified
+    by indices.
+  </li>
+  <li>
+    for (let i = 0; i < shuffled.length; i++) { str += shuffled[i]; }: After
+    shuffling the characters, this loop iterates over the shuffled array and
+    concatenates its elements to the string str in the order they appear in the
+    array.
+  </li>
+  <li>
+    return str;: Once all characters are shuffled and concatenated into the
+    string str, the function returns str, which represents the shuffled string
+    according to the specified indices.
+  </li>
+</ol>
+
+<!-- 
+    var strStr = function (haystack, needle) {
+    for (let i = 0; i < haystack.length; i++) {
+        if (needle === mySubstring(haystack,i, i + needle.length)) {
+            return i;
+        }
+    }
+
+    return -1;
+};
+var mySubstring = function(s,idx,end=s.length) {
+    let str = "";
+    for(let i = idx; i < end; i++){
+        str += s[i]
+    }
+    return str ;
+}
+ -->
+
+<ol>
+  <li>
+    for (let i = 0; i < haystack.length; i++) { ... }: This for loop iterates
+    over each character position in the haystack string.
+  </li>
+  <li>
+    if (needle === mySubstring(haystack, i, i + needle.length)) { ... }: Inside
+    the loop, it checks if the substring of haystack from the current index i to
+    i + needle.length matches the needle string.
+  </li>
+  <li>
+    mySubstring(haystack, i, i + needle.length): This calls a custom function
+    mySubstring to extract the substring of haystack starting from index i and
+    ending at index i + needle.length.
+  </li>
+  <li>
+    If a match is found, it returns the index i, which represents the starting
+    position of the needle in the haystack
+  </li>
+  <li>
+    If no match is found after looping through the entire haystack, it returns
+    -1, indicating that the needle is not found in the haystack.
+  </li>
+  <li>
+    This solution performs a linear search through the haystack string,
+    comparing substrings of length equal to the length of the needle with the
+    needle itself. If a matching substring is found, it returns the index of the
+    start of that substring in the haystack. If no match is found, it returns
+    -1. This approach essentially implements a basic string search algorithm.
+  </li>
+</ol>
+
+<!-- 
+    ar truncateSentence = function(s, k) {
+    const words = s.split(" ");
+    let str = "";
+    let addSpace = k;
+    for(let i = 0; i < k; i++){
+        str += words[i];
+        addSpace--;
+        if(addSpace) str += " ";
+    }
+    return str;
+    };
+ -->
+
+<ol>
+  <li>
+    Split the input string `s` into an array of words separated by space " ",
+    meaning it splits the string wherever there's a space character.
+  </li>
+  <li>
+    let str = "";: Initializes an empty string str to store the resulting
+    string.
+  </li>
+  <li>
+    let addSpace = k;: Initializes a variable addSpace with the value of k,
+    which represents the desired number of words to be included in the resulting
+    string.
+  </li>
+  <li>
+    for(let i = 0; i < k; i++) { ... }: This for loop iterates k times, where k
+    is the desired number of words to include in the resulting string.
+  </li>
+  <li>
+    str += words[i];: Concatenates the current word (at index i) to the str
+    string.
+  </li>
+  <li>
+    addSpace--;: Decrements the addSpace variable, indicating that one word has
+    been added to the result.
+  </li>
+  <li>
+    if (addSpace) str += " ";: Checks if there are more words to be added
+    (addSpace is not zero). If so, it adds a space after each word except for
+    the last one.
+  </li>
+  <li>
+    return str;: Once the loop completes, the function returns the resulting
+    string str.
+  </li>
+  <li>
+    This solution takes an input string s, splits it into words, and then
+    constructs a new string containing the first k words from the original
+    string. It achieves this by iterating over the words and concatenating them
+    into a new string, with spaces between each word except for the last one.
+    Finally, it returns the constructed string as the result.
+  </li>
+</ol>
+
+<!-- 
+    var isPrefixString = function(s, words) {
+    str = "";
+    if(words[0]!== s.substring(0,words[0].length)) return false;
+    for(let i = 0; i < words.length; i++){
+        str += words[i];
+        console.log(str)
+        if (str===s) return true
+    }
+    return false;
+};
+  -->
+
+<ol>
+  <li>
+    str = /"/";: Initializes an empty string str which will be used to
+    concatenate the words.
+  </li>
+  <li>
+    if(words[0]!== mySubstring(s,0,words[0].length)) return false;: Compares the
+    first word (words[0]) with the substring of s starting from index 0 and
+    having the same length as words[0]. If they are not equal, it returns false.
+    This is likely ensuring that the s string starts with the same sequence of
+    characters as the first word.
+  </li>
+  <li>
+    for(let i = 0; i < words.length; i++) { ... }: This for loop iterates over
+    each word in the words array.
+  </li>
+  <li>
+    str += words[i];: Concatenates the current word (words[i]) to the string
+    str.
+  </li>
+  <li>
+    if (str===s) return true: Checks if the concatenated string str is equal to
+    the original string s. If they are equal, it means that the concatenation of
+    all words in words equals the original string s, so it returns true.
+  </li>
+  <li>
+    return false;: If the loop completes without finding a match, it returns
+    false. This indicates that the concatenation of all words in words does not
+    equal the original string s.
+  </li>
+</ol>
+
+<!-- 
+    var removeElement = function(nums, val) {
+    let k = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== val) {
+            nums[k] = nums[i];
+            k++;
+        }
+    }
+    return k;
+};
+ -->
+
+<ol>
+  <li>
+    let k = 0;: Initializes a variable k to 0. This variable will be used to
+    track the current position to which elements satisfying the condition are
+    moved.
+  </li>
+  <li>
+    for (let i = 0; i < nums.length; i++) { ... }: This for loop iterates over
+    each element of the array nums.
+  </li>
+  <li>
+    if (nums[i] !== val) { ... }: Checks if the current element nums[i] is not
+    equal to the value val.
+  </li>
+  <li>
+    Inside the if block, if the current element is not equal to val, it assigns
+    the value of nums[i] to the position nums[k], where k represents the index
+    where the next non-val element should be placed.
+  </li>
+  <li>
+    After assigning the value, it increments k by 1 to move to the next
+    position.
+  </li>
+  <li>
+    Once all elements have been processed, k represents the length of the
+    modified array where all occurrences of val have been removed, and the
+    elements are rearranged to fill the space left by removing val.
+  </li>
+  <li>
+    <b>Summary : </b>This solution removes all occurrences of a specific value
+    val from an array nums by shifting non-val elements to the beginning of the
+    array. It maintains a pointer k to track the position where the next non-val
+    element should be placed. Finally, it returns the updated length of the
+    array, which represents the number of elements in the modified array without
+    the value val.
+  </li>
+</ol>
+
+<!-- 
+    var argumentsLength = function(...args) {
+    return args.length
+};
+  -->
+
+<ol>
+  <li>
+    var argumentsLength = function(...args): This line defines a function named
+    argumentsLength. It uses the rest parameter syntax (...args) to gather all
+    the arguments passed to the function into an array named args.
+  </li>
+  <li>
+    return args.length: simply return the length of the args array, which
+    corresponds to the number of arguments passed to the function.
+  </li>
+</ol>
+
+<!-- 
+    var isPrefixOfWord = function(sentence, searchWord) {
+    sentenceArr = splitSentence(sentence);
+    for (let i = 0; i <  sentenceArr.length; i++ ) {
+        let isPrefix = true;
+        for (let j = 0; j < searchWord.length; j++) {
+            if (sentenceArr[i][j] !== searchWord[j]) {
+                isPrefix = false;
+                break;
+            }
+        }
+        if (isPrefix) {
+            return i+1;
+        }
+    }
+    return -1;
+};
+
+function splitSentence(sentence) {
+    const words = [];
+    let word = '';
+    
+    for (let i = 0; i < sentence.length; i++) {
+        const char = sentence[i];
+        
+        if (char === ' ') {
+            if (word !== '') {
+                words.push(word);
+                word = '';
+            }
+        } else {
+            word += char;
+        }
+    }
+    
+    if (word !== '') {
+        words.push(word);
+    }
+    
+    return words;
+}
+ -->
+
+<ol>
+  <li>
+    Split the input string `sentence` into an array separated by space " ",
+    meaning it splits the string wherever there's a space character.
+  </li>
+  <li>
+    for (let i = 0; i < sentenceArr.length; i++) { ... }: This for loop iterates
+    over each word in the sentenceArr.
+  </li>
+  <li>Initializes a boolean variable isPrefix to true.</li>
+  <li>
+    for (let j = 0; j < searchWord.length; j++) { ... }: This nested for loop
+    iterates over each character in the searchWord.
+  </li>
+  <li>
+    If the character in the i-th word of sentenceArr doesn't match the
+    corresponding character in searchWord, it sets isPrefix to false and breaks
+    out of the loop.
+  </li>
+  <li>
+    If isPrefix is still true after the inner loop, it means the searchWord is a
+    prefix of the current word. So, it returns the index of the current word
+    (i+1 as it's 1-indexed).
+  </li>
+  <li>If no prefix is found in any word, it returns -1.</li>
+  <ul>
+    <li><b>Function to split sentence</b></li>
+    <li>
+      function splitSentence(sentence) { ... }: Defines a function named
+      splitSentence that takes a string sentence as input.
+    </li>
+    <li>
+      Initializes an empty array words to store the words extracted from the
+      sentence.
+    </li>
+    <li>
+      Initializes an empty string word to store the current word being formed.
+    </li>
+    <li>
+      for (let i = 0; i < sentence.length; i++) { ... }: This for loop iterates
+      over each character in the sentence.
+    </li>
+    <li>
+      If the character is a space ' ', it checks if the word is not empty. If
+      not, it pushes the word into the words array and resets the word to an
+      empty string.
+    </li>
+    <li>
+      If the character is not a space, it appends the character to the word.
+    </li>
+    <li>
+      After the loop, if the word is not empty (indicating there's a word at the
+      end of the sentence), it pushes it into the words array.
+    </li>
+    <li>
+      Returns the words array containing all the words extracted from the
+      sentence.
+    </li>
+  </ul>
+  <li><b>Summary : </b></li>
+  <li>
+    The isPrefixOfWord function determines if a given searchWord is a prefix of
+    any word in the sentence. It achieves this by splitting the sentence into
+    words and then iterating over each word to check if the searchWord matches
+    the beginning of any word. The splitSentence function is used to split the
+    sentence into words, handling cases where words are separated by spaces.
+  </li>
+</ol>
+
+<!-- 
+    var subtractProductAndSum = function(n) {
+    let product = 1;
+    let sumOfDigits = 0;
+    const digits = String(n);
+    for (let digit of digits) {
+        const digitInt = Number(digit);
+        product *= digitInt;
+        sumOfDigits += digitInt;
+    }
+    return product - sumOfDigits;
+};
+  -->
+
+<ol>
+  <li>
+    let product = 1;: Initializes a variable product to 1. This variable will
+    store the product of all the digits.
+  </li>
+  <li>
+    let sumOfDigits = 0;: Initializes a variable sumOfDigits to 0. This variable
+    will store the sum of all the digits.
+  </li>
+  <li>
+    const digits = String(n);: Converts the number n into a string and stores it
+    in the digits variable. This allows iterating over each digit of the number.
+  </li>
+  <li>
+    for (let digit of digits) { ... }: This for...of loop iterates over each
+    character (digit) in the string digits.
+  </li>
+  <li>
+    const digitInt = Number(digit);: Converts the current digit (which is a
+    character) to an integer and stores it in the digitInt variable.
+  </li>
+  <li>product *= digitInt;: Multiplies the product by the current digit.</li>
+  <li>sumOfDigits += digitInt;: Adds the current digit to the sumOfDigits.</li>
+  <li>
+    return product - sumOfDigits;: Returns the result of subtracting the
+    sumOfDigits from the product. This essentially computes the difference
+    between the product of the digits and the sum of the digits of the number n.
+  </li>
+  <li>
+    <b>Summary : </b>This JavaScript function takes a number n as input,
+    calculates the product of its digits, calculates the sum of its digits, and
+    then returns the difference between the product and the sum of the digits.
+    It accomplishes this by converting the number to a string, iterating over
+    each digit, and performing the necessary calculations.
+  </li>
+</ol>
+
+<!-- 
+   var smallerNumbersThanCurrent = function(nums) {
+    const arr = [];
+    for(let i =0; i < nums.length; i++){
+        let count = 0;
+        for(let j =0; j < nums.length; j++){
+            if(i!==j && nums[i]>nums[j]){
+               count++;
+            }
+        }
+        arr.push(count);
+    }
+    return arr;
+};
+ -->
+
+<ol>
+  <li>
+    const arr = []: Initializes an empty array arr to store the count of
+    elements greater than the current element in the input array nums.
+  </li>
+  <li>
+    for(let i =0; i < nums.length; i++) { ... }: This loop iterates over each
+    element of the input array nums.
+  </li>
+  <li>
+    for(let j =0; j < nums.length; j++) { ... }: This nested loop also iterates
+    over each element of the input array nums. It is used to compare the current
+    element nums[i] with all other elements in the array.
+  </li>
+  <li>
+    Inside the inner loop, it checks if nums[i] is greater than nums[j] and i is
+    not equal to j.
+  </li>
+  <li>
+    If the condition is true, it increments the count variable. This indicates
+    that nums[i] is greater than nums[j].
+  </li>
+  <li>
+    After counting the elements greater than nums[i], it pushes the count value
+    into the arr array.
+  </li>
+  <li>
+    Once all elements in the input array nums have been processed, the function
+    returns the arr array containing the count of elements greater than each
+    element in the input array.
+  </li>
+  <li><b>Summary : </b></li>
+</ol>
+
+<!-- 
+    var findWordsContaining = function(words, x) {
+    const result = [];  
+    for (let i = 0; i < words.length; i++) {
+        let found = false;
+        for (let j = 0; j < words[i].length; j++) {
+            if (words[i][j] === x) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            result.push(i);
+        }
+    }
+    return result;
+};
+ -->
+
+<ol>
+  <li>
+    const result = [];: Initializes an empty array result to store the indices
+    of words where the character x is found.
+  </li>
+  <li>
+    <b>Outer Loop : </b>for (let i = 0; i < words.length; i++) { ... }: This for
+    loop iterates over each word in the words array.
+  </li>
+  <li>
+    <b>Inner Loop:</b>for (let j = 0; j < words[i].length; j++) { ... }: This
+    nested for loop iterates over each character of the current word (words[i]).
+  </li>
+  <li>
+    if (words[i][j] === x) { ... }: It checks if the current character of the
+    current word is equal to the specified character x.
+  </li>
+  <li>
+    If the character is found, the variable found is set to true, and the loop
+    breaks.
+  </li>
+  <li>
+    <b>Storing Index:</b>if (found) { result.push(i); }: If the character x is
+    found in the current word, it pushes the index i (index of the current word)
+    into the result array.
+  </li>
+  <li>
+    After iterating through all the words, the function returns the result array
+    containing the indices of words where the character x is found.
+  </li>
+  <li>
+    <b>Summary : </b>This code snippet iterates through an array of words,
+    checking each word for the presence of a specified character x. If the
+    character is found in a word, the index of that word is added to the result
+    array. Finally, it returns the result array containing the indices of words
+    where the character x is found.
+  </li>
+</ol>
+
+<!-- 
+    var isAcronym = function(words, s) { 
+    if(words.length !== s.length) return false;
+    let acronym = '';
+    for (let word of words) {
+        acronym += word[0];
+    } 
+    return acronym === s;
+};
+ -->
+
+<ol>
+  <li>
+    if (words.length !== s.length) return false;: Check if the length of the
+    input array words is not equal to the length of string s. If they have
+    different lengths, immediately return false, indicating that s cannot be an
+    acronym for the given words.
+  </li>
+  <li>Initialize an empty string acronym to store the acronym.</li>
+  <li>
+    for (let word of words) { ... }: This for...of loop iterates over each word
+    word in the input array words.
+  </li>
+  <li>
+    For each word, it appends the first character (word[0]) to the acronym
+    string.
+  </li>
+  <li>
+    After forming the acronym from the first letters of the words, it compares
+    the generated acronym (acronym) with the provided string s.
+  </li>
+  <li>
+    If the generated acronym matches the provided string s, it returns true,
+    indicating that s is an acronym for the given words. Otherwise, it returns
+    false.
+  </li>
+  <li>
+    <b>Summary : </b>This function determines whether a given string s is an
+    acronym for a given array of words words. It first checks if the lengths of
+    words and s are the same. Then, it builds an acronym by concatenating the
+    first letters of each word in words. Finally, it compares the generated
+    acronym with s and returns true if they match, otherwise false.
+  </li>
+</ol>
+
+<!-- 
+    var maximumWealth = function(accounts) {
+     let maxWealth = 0;
+    for (let i = 0; i < accounts.length; i++) {
+        let wealth = 0;
+        for (let j = 0; j < accounts[i].length; j++) {
+            wealth += accounts[i][j];
+        }
+        if(maxWealth < wealth) maxWealth = wealth;
+    }
+    return maxWealth;
+};
+ -->
+
+<ol>
+  <li>
+    let maxWealth = 0;: Initializes a variable maxWealth to store the maximum
+    wealth found among all customers. It's initially set to 0.
+  </li>
+  <li>
+    <b>Outer Loop : </b> for (let i = 0; i < accounts.length; i++) { ... }: This
+    for loop iterates over each customer's accounts. It goes from index 0 to the
+    length of the accounts array.
+  </li>
+  <li>
+    <b>Inner Loop (Calculating Wealth):</b>let wealth = 0;: Initializes a
+    variable wealth to calculate the total wealth of the current customer. It's
+    set to 0 for each customer.
+  </li>
+  <li>
+    for (let j = 0; j < accounts[i].length; j++) { ... }: This nested for loop
+    iterates over each account of the current customer (accounts[i]).
+  </li>
+  <li>It adds the balance of each account to the wealth variable.</li>
+  <li>
+    <b>Finding Maximum Wealth: </b> if(maxWealth < wealth) maxWealth = wealth;:
+    Compares the total wealth of the current customer (wealth) with the current
+    maximum wealth (maxWealth). If the wealth of the current customer exceeds
+    the current maximum, maxWealth is updated to the wealth of the current
+    customer.
+  </li>
+  <li>
+    After iterating over all customers' accounts and finding the maximum wealth,
+    the function returns maxWealth.
+  </li>
+  <li>
+    <b>Summary : </b>This solution iterates over each customer's accounts,
+    calculates the total wealth of each customer, and updates the maximum wealth
+    found so far. Finally, it returns the maximum wealth among all customers.
+  </li>
+</ol>
+
+<!-- 28 Feb 2024 -->
+<!-- 
+    function sumOfSpecialElements(nums) {
+    let sum = 0;
+    const n = nums.length;
+    for (let i = 1; i <= n; i++) {
+        if (n % i === 0) {
+            sum += nums[i - 1] ** 2;
+        }
+    }
+    return sum;
+}
+
+ -->
+
+<ol>
+  <li>
+    <b>let sum = 0;</b>: Initializes a variable sum to store the sum of the
+    special elements.
+  </li>
+  <li>
+    <b>const n = nums.length;:</b> Calculates the length of the input array nums
+    and stores it in the variable n.
+  </li>
+  <li>
+    <b>for (let i = 1; i <= n; i++) { ... }:</b> This for loop iterates from 1
+    to n, inclusive, where n is the length of the input array nums.
+  </li>
+  <li>
+    <b>if (n % i === 0) { ... }:</b> Checks if n is divisible by the current
+    index i without any remainder. This condition checks if i is a factor of n,
+    implying a special element.
+  </li>
+  <li>
+    <b>nums[i - 1] ** 2: </b>Retrieves the element at index i - 1 from the input
+    array nums and squares it.
+  </li>
+  <li>
+    <b>sum += nums[i - 1] ** 2;:</b> Adds the square of the special element to
+    the sum.
+  </li>
+  <li>
+    Once all special elements have been processed, the function returns the
+    accumulated sum.
+  </li>
+</ol>
+
+<!-- 
+    var differenceOfSum = function(nums) {
+    let elementSum = 0;
+    let digitSum = 0;
+    for (let i = 0; i < nums.length; i++) {
+        let numAsString = nums[i].toString();
+        elementSum += nums[i];
+        for (let j = 0; j < numAsString.length; j++) {
+            digitSum += parseInt(numAsString[j]);
+        }
+    }
+    return +(elementSum - digitSum);
+};
+ -->
+
+<ol>
+  <li>
+    <strong>Function Definition</strong>:
+    <ul>
+      <li>
+        <code>var differenceOfSum = function(nums)</code>: Defines a function
+        named <code>differenceOfSum</code> that takes an array
+        <code>nums</code> as input.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Initialization</strong>:
+    <ul>
+      <li>
+        Initializes two variables: <code>elementSum</code> to store the sum of
+        all elements in the array, and <code>digitSum</code> to store the sum of
+        digits extracted from each number.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Iterating Over Input Array</strong>:
+    <ul>
+      <li>
+        <code>for (let i = 0; i &lt; nums.length; i++) { ... }</code>: This
+        <code>for</code> loop iterates over each element in the input array
+        <code>nums</code>.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Converting Number to String</strong>:
+    <ul>
+      <li>
+        <code>let numAsString = nums[i].toString();</code>: Converts the current
+        number to a string representation using the
+        <code>toString()</code> method.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Calculating Element Sum</strong>:
+    <ul>
+      <li>
+        <code>elementSum += nums[i];</code>: Adds the current number to the
+        <code>elementSum</code>.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Calculating Digit Sum</strong>:
+    <ul>
+      <li>
+        <code>for (let j = 0; j &lt; numAsString.length; j++) { ... }</code>:
+        This nested <code>for</code> loop iterates over each character (digit)
+        in the string representation of the current number.
+      </li>
+      <li>
+        <code>digitSum += parseInt(numAsString[j]);</code>: Converts each digit
+        character to a number using <code>parseInt()</code> and adds it to the
+        <code>digitSum</code>.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Returning Absolute Difference</strong>:
+    <ul>
+      <li>
+        <code>return +(elementSum - digitSum);</code>: Calculates the absolute
+        difference between <code>elementSum</code> and <code>digitSum</code> and
+        returns the result. The unary plus (<code>+</code>) before the
+        expression ensures that the result is coerced back to a number.
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<!-- 
+var sumOfSquares = function(nums) {
+    let sum = 0;
+    const n = nums.length;
+    for (let i = 1; i <= n; i++) {
+        if (n % i === 0) {
+            sum += nums[i - 1] ** 2;
+        }
+    }
+    return sum;
+};
+  -->
+
+<ol>
+  <li>
+    Function Definition:
+    <ul>
+      <li>
+        <code>var sumOfSquares = function(nums)</code>: Defines a function named
+        <code>sumOfSquares</code> that takes an array <code>nums</code> as
+        input.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Initialization:
+    <ul>
+      <li>
+        Initializes a variable <code>sum</code> to store the sum of squares of
+        certain elements.
+      </li>
+      <li>
+        Initializes a constant <code>n</code> with the length of the input array
+        <code>nums</code>.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Iterating Over Indices:
+    <ul>
+      <li>
+        <code>for (let i = 1; i &lt;= n; i++) { ... }</code>: This for loop
+        iterates over the indices <code>i</code> from 1 to the length of the
+        array <code>nums</code>.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Checking Divisibility:
+    <ul>
+      <li>
+        Inside the loop, it checks if the length of <code>nums</code> is
+        divisible by <code>i</code> without any remainder using the condition
+        <code>n % i === 0</code>.
+      </li>
+      <li>
+        This condition ensures that the index <code>i</code> is a divisor of the
+        length of the array <code>nums</code>.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Summing Squares:
+    <ul>
+      <li>
+        If <code>i</code> is a divisor of the length of the array, it adds the
+        square of the element at index <code>(i - 1)</code> (since indices start
+        from 0) to the <code>sum</code>.
+      </li>
+      <li>
+        It accesses the element at index <code>(i - 1)</code> of the array
+        <code>nums</code> using <code>nums[i - 1]</code> and calculates its
+        square using the exponentiation operator <code>**</code>.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Return Value:
+    <ul>
+      <li>
+        Once all relevant indices are processed, the function returns the
+        computed sum of squares.
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<!-- 
+    var sumOfUnique = function(nums) {
+    const obj = {}
+    let sum = 0;
+    for(let i = 0; i < nums.length; i++){
+        if(!(obj[nums[i]])){
+            obj[nums[i]] = 1;
+        }else {
+            obj[nums[i]] = 2;
+        }
+    }
+    for(let i = 0; i < nums.length; i++){
+        if((obj[nums[i]])===1) sum +=nums[i];
+    }
+    return sum;
+};
+ -->
+
+<ol>
+  <li>
+    <strong>Function Definition:</strong>
+    <ul>
+      <li>
+        <code>var sumOfUnique = function(nums)</code>: Defines a function named
+        <code>sumOfUnique</code> that takes an array <code>nums</code> as input.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Initialization:</strong>
+    <ul>
+      <li>
+        <code>const obj = {}</code>: Initializes an empty object
+        <code>obj</code> to store the count of occurrences of each number.
+      </li>
+      <li>
+        Initializes a variable <code>sum</code> to store the sum of unique
+        elements.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Count Occurrences:</strong>
+    <ul>
+      <li>
+        Iterates through the array <code>nums</code> using a
+        <code>for</code> loop.
+      </li>
+      <li>
+        For each number <code>nums[i]</code>, it checks if
+        <code>obj[nums[i]]</code> exists.
+      </li>
+      <li>
+        If <code>obj[nums[i]]</code> doesn't exist (i.e.,
+        <code>undefined</code>), it sets <code>obj[nums[i]]</code> to
+        <code>1</code>, indicating that the number has occurred once.
+      </li>
+      <li>
+        If <code>obj[nums[i]]</code> exists (i.e., it's not
+        <code>undefined</code>), it increments <code>obj[nums[i]]</code> by
+        <code>1</code>, indicating that the number has occurred again.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Compute Sum of Unique Elements:</strong>
+    <ul>
+      <li>
+        Iterates through the array <code>nums</code> again using a
+        <code>for</code> loop.
+      </li>
+      <li>
+        For each number <code>nums[i]</code>, it checks if
+        <code>obj[nums[i]]</code> is equal to <code>1</code>.
+      </li>
+      <li>
+        If <code>obj[nums[i]]</code> is equal to <code>1</code>, it adds
+        <code>nums[i]</code> to the sum. This ensures that only unique elements
+        are included in the sum.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Return Sum:</strong>
+    <ul>
+      <li>
+        Returns the computed sum, which represents the sum of unique elements in
+        the array <code>nums</code>.
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<!-- 
+    var countNegatives = function(grid) {
+    let count = 0;
+    for(let i = 0;i < grid.length; i++ ){
+        for(let j = 0;j < grid[i].length; j++ ){
+            if(grid[i][j] < 0) count++;
+        }
+    }
+    return count;
+};
+ -->
+
+<ul>
+  <li>
+    Function Definition:
+    <ul>
+      <li>
+        <code>var countNegatives = function(grid)</code>: Defines a function
+        named countNegatives that takes a 2D array grid as input.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Initialization:
+    <ul>
+      <li>
+        <code>let count = 0;</code>: Initializes a variable count to store the
+        count of negative numbers.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Nested Loop:
+    <ul>
+      <li>
+        <code>for (let i = 0; i &lt; grid.length; i++) { ... }</code>: This
+        outer loop iterates over each row of the 2D array grid.
+      </li>
+      <li>
+        <code>for (let j = 0; j &lt; grid[i].length; j++) { ... }</code>: This
+        inner loop iterates over each element in the current row (grid[i]).
+      </li>
+    </ul>
+  </li>
+  <li>
+    Counting Negative Numbers:
+    <ul>
+      <li>
+        <code>if(grid[i][j] &lt; 0) count++;</code>: Checks if the current
+        element at index [i][j] is negative. If it is, increment the count
+        variable.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Return Count:
+    <ul>
+      <li>
+        After iterating through all elements of the 2D array, the function
+        returns the total count of negative numbers.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!-- 
+    var thirdMax = function(nums) {
+    let max1 = -Infinity, max2 = -Infinity, max3 = -Infinity;
+    
+    for (const num of nums) {
+        if (num > max1) {
+            max3 = max2;
+            max2 = max1;
+            max1 = num;
+        } else if (num < max1 && num > max2) {
+            max3 = max2;
+            max2 = num;
+        } else if (num < max2 && num > max3) {
+            max3 = num;
+        }
+    }
+    
+    return max3 === -Infinity ? max1 : max3;
+};
+ -->
+<ul>
+  <li>
+    <strong>Initialization:</strong>
+    <ul>
+      <li>
+        It initializes three variables <code>max1</code>, <code>max2</code>, and
+        <code>max3</code> to <code>-Infinity</code>. These variables are used to
+        store the first, second, and third maximum numbers, respectively.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Iteration over Array:</strong>
+    <ul>
+      <li>
+        It iterates through each element <code>num</code> in the array
+        <code>nums</code> using a <code>for...of</code> loop.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Updating Maximums:</strong>
+    <ul>
+      <li>
+        Inside the loop, it checks each number against the current maximums to
+        update them accordingly.
+      </li>
+      <li>
+        If <code>num</code> is greater than <code>max1</code>, it updates
+        <code>max1</code>, <code>max2</code>, and <code>max3</code> accordingly
+        to maintain the order of the maximums.
+      </li>
+      <li>
+        If <code>num</code> is between <code>max1</code> and <code>max2</code>,
+        it updates <code>max2</code> and <code>max3</code>.
+      </li>
+      <li>
+        If <code>num</code> is between <code>max2</code> and <code>max3</code>,
+        it updates <code>max3</code>.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Handling Edge Case:</strong>
+    <ul>
+      <li>
+        Finally, it checks if <code>max3</code> is still <code>-Infinity</code>.
+        If it is, it means that there are fewer than three distinct maximum
+        numbers in the array. In this case, it returns <code>max1</code> as the
+        third maximum. Otherwise, it returns <code>max3</code>.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Return Value:</strong>
+    <ul>
+      <li>
+        The function returns the third maximum number found in the array, or
+        <code>max1</code> if there are fewer than three distinct maximum
+        numbers.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!-- 
+    var findNonMinOrMax = function(nums) {
+    if (nums.length < 3) return -1;
+    let min = nums[0];
+    let max = nums[0];
+    for(let i = 1; i < nums.length; i++){
+        if(nums[i]>max) max = nums[i];
+        if(nums[i]<min) min = nums[i];
+    }
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i]!== max && nums[i]!==min) return nums[i];
+    }
+    return -1;
+};
+  -->
+
+<ol>
+  <li>
+    Function Definition:
+    <ul>
+      <li>
+        var findNonMinOrMax = function(nums): Defines a function named
+        findNonMinOrMax that takes an array nums as input.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Edge Case Handling:
+    <ul>
+      <li>
+        if (nums.length &lt; 3) return -1;: If the length of the array nums is
+        less than 3, there cannot be a non-minimum or non-maximum element, so
+        the function returns -1 as a special value indicating that such an
+        element does not exist.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Initialization of Min and Max Variables:
+    <ul>
+      <li>
+        Initializes two variables min and max with the value of the first
+        element of the array nums.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Finding Minimum and Maximum:
+    <ul>
+      <li>
+        The for loop iterates through the elements of the array starting from
+        the second element (i = 1).
+        <ul>
+          <li>
+            Within the loop:
+            <ul>
+              <li>
+                if(nums[i] &gt; max) max = nums[i];: Updates the value of max if
+                the current element nums[i] is greater than the current maximum
+                max.
+              </li>
+              <li>
+                if(nums[i] &lt; min) min = nums[i];: Updates the value of min if
+                the current element nums[i] is smaller than the current minimum
+                min.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    Finding Non-Minimum and Non-Maximum Element:
+    <ul>
+      <li>
+        After finding the minimum and maximum values, another for loop iterates
+        through the elements of the array nums.
+        <ul>
+          <li>
+            Within this loop:
+            <ul>
+              <li>
+                if(nums[i] !== max &amp;&amp; nums[i] !== min) return nums[i];:
+                Checks if the current element nums[i] is neither the maximum max
+                nor the minimum min. If so, it returns this element as it is the
+                first occurrence of a non-minimum or non-maximum element.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    Return -1 if No Non-Minimum or Non-Maximum Element Found:
+    <ul>
+      <li>
+        If no non-minimum or non-maximum element is found in the array, the
+        function returns -1.
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<!-- 
+    var findNumbers = function(nums) {
+    count = 0;
+    for(let i = 0; i < nums.length; i++){
+        const elem = "" + nums[i];
+        if(elem.length%2===0) count++;
+    }
+    return count;
+};
+ -->
+
+<!-- 
+    var isPerfectSquare = function(num) {
+    let i=1;
+    while(i*i<num)i++; 
+    return i*i==num;
+};
+ -->
+
+<ul>
+  <li>Function Definition:</li>
+  <code>var isPerfectSquare = function(num):</code>
+  Defines a function named
+  <code>isPerfectSquare</code>
+  that takes one parameter
+  <code>num</code
+  >, which is the number to check for being a perfect square.
+  <li>Initialization:</li>
+  <code>let i = 1;</code>
+  Initializes a variable
+  <code>i</code>
+  with the value of
+  <code>1</code
+  >. This variable will be used to iterate and find the square root of
+  <code>num</code
+  >.
+  <li>Finding the Square Root:</li>
+  <code>while (i * i < num) i++;</code>
+  This
+  <code>while</code>
+  loop continues until
+  <code>i * i</code>
+  is less than
+  <code>num</code
+  >. It iterates by incrementing
+  <code>i</code>
+  in each iteration until the square of
+  <code>i</code>
+  is greater than or equal to
+  <code>num</code
+  >.
+  <li>Check for Perfect Square:</li>
+  <code>return i * i == num;</code>
+  After the loop terminates, it checks if the square of the final value of
+  <code>i</code>
+  is equal to
+  <code>num</code
+  >. If the square of
+  <code>i</code>
+  is equal to
+  <code>num</code
+  >, it returns
+  <code>true</code
+  >, indicating that
+  <code>num</code>
+  is a perfect square. Otherwise, it returns
+  <code>false</code
+  >.
+</ul>
+
+<!-- 
+    var singleNumber = function(nums) {
+    const occurenceObj = {};
+    for(let i = 0; i < nums.length; i++){
+        occurenceObj[nums[i]] ? occurenceObj[nums[i]]++ : occurenceObj[nums[i]] = 1;
+    }
+    for(let i = 0; i < nums.length; i++){
+        if(occurenceObj[nums[i]] === 1) return nums[i]; 
+    }
+    return 0;
+};
+ -->
+
+<ul>
+  <li>
+    Initialization of an Occurrence Object:
+    <ul>
+      <li>const occurenceObj = {};</li>
+      <li>
+        Initializes an empty object occurenceObj to store the count of
+        occurrences for each number in the input array.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Counting Occurrences:
+    <ul>
+      <li>The first for loop iterates over each element in the nums array.</li>
+      <li>
+        For each element nums[i], it checks whether occurenceObj[nums[i]]
+        exists. If it exists, it increments the count by one
+        (occurenceObj[nums[i]]++). If it doesn't exist, it initializes the count
+        to 1 (occurenceObj[nums[i]] = 1).
+      </li>
+    </ul>
+  </li>
+  <li>
+    Finding the Single Number:
+    <ul>
+      <li>
+        After counting the occurrences, the second for loop iterates over each
+        element in the nums array again.
+      </li>
+      <li>
+        For each element nums[i], it checks whether its occurrence count in
+        occurenceObj is equal to 1 (occurenceObj[nums[i]] === 1). If it is, it
+        means the current number occurs only once in the array, so it returns
+        that number (return nums[i]).
+      </li>
+    </ul>
+  </li>
+  <li>
+    Handling Edge Case:
+    <ul>
+      <li>
+        If no single number is found (i.e., all numbers occur more than once),
+        it returns 0 (return 0).
+      </li>
+    </ul>
+  </li>
+  <li>
+    Final Result:
+    <ul>
+      <li>
+        The function returns either the single number that occurs once or 0 if
+        no such number exists in the array.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!-- 
+    var countSeniors = function(details) {
+    let count = 0;
+    for (let detail of details) {
+        let ageString = detail.substring(11, 13);
+        let age = parseInt(ageString);
+        if (age > 60) {
+            count++;
+        }
+    }
+    return count;
+};
+ -->
+
+<p>Function Definition:</p>
+<ul>
+  <li>
+    <code>var countSeniors = function(details):</code> Defines a function named
+    countSeniors that takes an array details as input. Each element in details
+    is assumed to be a string containing information about an individual, such
+    as their name, age, etc.
+  </li>
+</ul>
+<p>Initialization:</p>
+<ul>
+  <li>
+    <code>let count = 0;</code> Initializes a variable count to keep track of
+    the number of seniors found in the details array.
+  </li>
+</ul>
+<p>Iterating Over Details:</p>
+<ul>
+  <li>
+    <code>for (let detail of details) { ... }</code>: This
+    <code>for...of</code> loop iterates over each element detail in the details
+    array.
+  </li>
+</ul>
+<p>Extracting Age:</p>
+<ul>
+  <li>
+    <code>let ageString = detail.substring(11, 13);</code>: Extracts the age
+    substring from the detail string. It assumes that the age is located at
+    positions 11 and 12 in the detail string.
+  </li>
+  <li>
+    <code>let age = parseInt(ageString);</code>: Parses the extracted age
+    substring into an integer using parseInt.
+  </li>
+</ul>
+<p>Checking Age:</p>
+<ul>
+  <li>
+    <code>if (age > 60) { count++; }</code>: Checks if the parsed age is greater
+    than 60. If so, increments the count variable, indicating that a senior has
+    been found.
+  </li>
+</ul>
+<p>Return Count:</p>
+<ul>
+  <li>
+    <code>return count;</code>: Returns the final count of seniors found in the
+    details array.
+  </li>
+</ul>
+
+<!-- 
+    var finalValueAfterOperations = function(operations) {
+    let count=0;
+    for(let i=0;i<operations.length;i++){
+        switch(operations[i]){
+            case '++X':{
+                ++count;
+                break;
+            }
+            case 'X++':{
+                count++;
+                break;
+            }case '--X':{
+                --count;
+                break;
+            }case 'X--':{
+                count--;
+                break;
+            }
+        }
+    }
+    return count;
+};
+ -->
+
+<ul>
+  <li>
+    Function Definition:
+    <ul>
+      <li>
+        The function finalValueAfterOperations takes an array operations as
+        input.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Initialization:
+    <ul>
+      <li>It initializes a variable count to keep track of the final value.</li>
+    </ul>
+  </li>
+  <li>
+    Loop through Operations:
+    <ul>
+      <li>
+        The function iterates through each element of the operations array.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Switch Statement:
+    <ul>
+      <li>
+        It uses a switch statement to handle different types of operations.
+      </li>
+      <li>
+        If the operation is '++X', it increments count by 1 (++count or
+        count++).
+      </li>
+      <li>
+        If the operation is 'X++', it increments count by 1 (count++ or
+        ++count).
+      </li>
+      <li>
+        If the operation is '--X', it decrements count by 1 (--count or
+        count--).
+      </li>
+      <li>
+        If the operation is 'X--', it decrements count by 1 (count-- or
+        --count).
+      </li>
+    </ul>
+  </li>
+  <li>
+    Return Value:
+    <ul>
+      <li>
+        After processing all operations, the function returns the final value of
+        count.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+var intersection = function(nums1, nums2) { let seen = {}; let duplicate = {};
+let result = []; for (const num of nums1) { seen[num] = true; } for (const num
+of nums2) { if (!duplicate[num] && seen[num]) { result.push(num); duplicate[num]
+= true; } } return result; };
+
+<ul>
+  <li>
+    Function Definition:
+    <ul>
+      <li>
+        The function intersection takes two arrays nums1 and nums2 as input.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Initialization:
+    <ul>
+      <li>
+        It initializes three objects:
+        <ul>
+          <li>seen: This object will store unique elements from nums1.</li>
+          <li>
+            duplicate: This object will store elements that are duplicates
+            between nums1 and nums2.
+          </li>
+          <li>
+            An empty array result: This array will store the intersection of
+            nums1 and nums2.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    First Loop (nums1):
+    <ul>
+      <li>It iterates through each element num in the array nums1.</li>
+      <li>
+        It sets the value of the seen object at key num to true, ensuring that
+        each unique element of nums1 is recorded.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Second Loop (nums2):
+    <ul>
+      <li>It iterates through each element num in the array nums2.</li>
+      <li>
+        It checks if num is not already marked as a duplicate and if it exists
+        in the seen object.
+      </li>
+      <li>
+        If both conditions are met, it means num is both present in nums1 and
+        nums2 and not yet added to the result array.
+        <ul>
+          <li>
+            In such case, it adds num to the result array and marks it as a
+            duplicate in the duplicate object to avoid adding it multiple times.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    Return Value:
+    <ul>
+      <li>
+        After processing all elements in nums2, the function returns the result
+        array containing the intersection of nums1 and nums2.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!-- 
+    var generateTheString = function(n) {
+    let result = '';
+    for (let i = 1; i < n; i++) {
+        result += 'a';
+    }
+    if (n % 2 === 0) {
+        result += 'b';
+    }else {
+        result += "a";
+    }
+    return result;
+};
+  -->
+
+<ul>
+  <li>
+    Function Definition:
+    <ul>
+      <li>The function generateTheString takes an integer n as input.</li>
+    </ul>
+  </li>
+  <li>
+    Initialization:
+    <ul>
+      <li>
+        It initializes a variable result to an empty string. This variable will
+        store the generated string.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Loop to Append Characters:
+    <ul>
+      <li>It uses a for loop to append characters to the result string.</li>
+      <li>
+        The loop runs from 1 to n-1 to append 'a' characters to the string n-1
+        times.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Condition for Even or Odd n:
+    <ul>
+      <li>After the loop, it checks if n is even (n % 2 === 0).</li>
+      <li>
+        If n is even, it appends a single 'b' character to the result string.
+      </li>
+      <li>
+        If n is odd, it appends another 'a' character to the result string.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Return Value:
+    <ul>
+      <li>Finally, it returns the generated string result.</li>
+    </ul>
+  </li>
+</ul>
+
+<!-- 
+    var intersect = function(nums1, nums2) {
+    const freq = {};
+    const result = [];
+    for (let i = 0; i < nums1.length; i++) {
+        freq[nums1[i]] = (freq[nums1[i]] || 0) + 1;
+    }
+    for (let i = 0; i < nums2.length; i++) {
+        if (freq[nums2[i]] > 0) {
+            result.push(nums2[i]);
+            freq[nums2[i]]--;
+        }
+    }
+    return result;
+};
+ -->
+
+<ul>
+  <li>
+    The function <em>intersect</em> takes two arrays <em>nums1</em> and
+    <em>nums2</em> as input and returns their intersection.
+  </li>
+  <li>
+    Initialization:
+    <ul>
+      <li>
+        It initializes an empty object <em>freq</em> to store the frequency of
+        elements in <em>nums1</em>.
+      </li>
+      <li>
+        It initializes an empty array <em>result</em> to store the intersection
+        of <em>nums1</em> and <em>nums2</em>.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Counting Frequencies in <em>nums1</em>:
+    <ul>
+      <li>It iterates through each element of <em>nums1</em>.</li>
+      <li>
+        For each element <em>nums1[i]</em>, it updates the frequency of that
+        element in the <em>freq</em> object.
+      </li>
+      <li>
+        If the element is encountered for the first time, it initializes its
+        frequency to 1. If it's already present, it increments its frequency.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Finding Intersection:
+    <ul>
+      <li>It iterates through each element of <em>nums2</em>.</li>
+      <li>
+        For each element <em>nums2[i]</em>, it checks if its frequency in
+        <em>freq</em> is greater than 0.
+      </li>
+      <li>
+        If the frequency is greater than 0, it means the element exists in
+        <em>nums1</em> and can be part of the intersection.
+      </li>
+      <li>
+        In such cases, it pushes the element to the <em>result</em> array and
+        decrements its frequency in the <em>freq</em> object.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Return Value:
+    <ul>
+      <li>
+        After processing all elements in <em>nums2</em>, it returns the
+        <em>result</em> array containing the intersection of <em>nums1</em> and
+        <em>nums2</em>.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!-- 
+    var runningSum = function(nums) {
+    const runningSum = [];
+    let sum = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        sum += nums[i];
+        runningSum.push(sum);
+    }
+
+    return runningSum;
+};
+  -->
+
+<ul>
+  <li>
+    Function Definition:
+    <ol>
+      <li>
+        The function <em>runningSum</em> takes an array <em>nums</em> as input.
+      </li>
+    </ol>
+  </li>
+  <li>
+    Initialization:
+    <ol>
+      <li>
+        It initializes an empty array <em>runningSum</em> to store the running
+        sums.
+      </li>
+      <li>
+        It initializes a variable <em>sum</em> to keep track of the running sum,
+        starting from 0.
+      </li>
+    </ol>
+  </li>
+  <li>
+    Loop through Array:
+    <ol>
+      <li>
+        The function iterates through each element of the input array
+        <em>nums</em> using a for loop.
+      </li>
+    </ol>
+  </li>
+  <li>
+    Updating Running Sum:
+    <ol>
+      <li>
+        For each element <em>nums[i]</em>, it adds the current element to the
+        running sum <em>sum</em>.
+      </li>
+      <li>
+        The running sum is then pushed into the <em>runningSum</em> array.
+      </li>
+    </ol>
+  </li>
+  <li>
+    Return Value:
+    <ol>
+      <li>
+        After processing all elements of the input array, the function returns
+        the array <em>runningSum</em>, which contains the running sum of
+        elements at each position.
+      </li>
+    </ol>
+  </li>
+  <li>
+    After processing all elements in <em>nums2</em>, it returns the result array
+    containing the intersection of <em>nums1</em> and <em>nums2</em>.
+  </li>
+</ul>
+
+<!-- 
+    var findGCD = function(nums) {
+    let min = nums[0];
+    let max = 0;
+    let ans = 0;
+    for(let i = 0; i < nums.length; i++){
+        min = Math.min(min,nums[i]);
+        max = Math.max(max,nums[i]);
+    }
+    for(let i = 1; i <= min; i++){
+        if(max%i===0 && min%i===0 ) ans = i;
+    }
+    return ans;
+};
+ -->
+
+<ul>
+  <li>
+    Function Definition:
+    <ul>
+      <li>The function findGCD takes an array nums as input.</li>
+    </ul>
+  </li>
+  <li>
+    Initialization:
+    <ul>
+      <li>It initializes three variables: min, max, and ans.</li>
+      <li>min is assigned the value of the first element of the nums array.</li>
+      <li>max is initialized to 0.</li>
+      <li>ans is initialized to 0.</li>
+    </ul>
+  </li>
+  <li>
+    Finding Minimum and Maximum:
+    <ul>
+      <li>
+        It iterates through the nums array to find the minimum and maximum
+        values.
+      </li>
+      <li>
+        The Math.min() function is used to update min, and the Math.max()
+        function is used to update max.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Finding the Greatest Common Divisor (GCD):
+    <ul>
+      <li>It iterates from 1 to min.</li>
+      <li>
+        For each i within this range, it checks if both max and min are
+        divisible by i.
+      </li>
+      <li>
+        If both max and min are divisible by i, i is a common divisor, and it
+        updates ans to this value.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Return Value:
+    <ul>
+      <li>
+        After processing all possible divisors, the function returns the value
+        of ans, which represents the greatest common divisor of all numbers in
+        the nums array.
+      </li>
+    </ul>
+  </li>
+</ul>
