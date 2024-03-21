@@ -7,5 +7,3 @@ Question 1:
 5. Between the buttons, display the current page number.
 6. At the top of the table, create a select component allowing users to choose the number of rows displayed per page.
 7. The options for the select component should be 10, 20, 50, and 100.
-    
-        
