@@ -9,6 +9,7 @@ const pageNoText = document.getElementById("page-no");
 let currentPage = 1;
 let dataLimit = 20;
 let filteredData = [];
+const URL = "https://jsonplaceholder.typicode.com/photos";
 
 function getPaginatedData(data) {
   const startIndex = (currentPage - 1) * dataLimit;
@@ -87,5 +88,26 @@ nextButton.addEventListener("click", () => {
 });
 
 pageNoText.innerText = currentPage;
-createTableHeader(userData);
-createTableBody(getPaginatedData(userData));
+
+// const fetchTableData = async () => {
+//   const response = await fetch(URL);
+//   if (!response.ok) {
+//     throw new Error("Failed to fetch data");
+//   }
+//   const data = await response.json();
+//   return data;
+// }
+
+// fetchTableData().then((data) => {
+//   createTableHeader(data);
+//   createTableBody(getPaginatedData(data));
+// }).catch((error) => {
+//   console.log(error)
+// });
+
+fetch(URL)
+  .then(response => response.json())
+  .then((data) => {
+    createTableHeader(data);
+    createTableBody(getPaginatedData(data));
+  });
