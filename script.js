@@ -1,12 +1,5 @@
 import { userData } from "./data.js";
 
-let data = userData;
-let savedTableData = localStorage.getItem('tableData');
-
-if(savedTableData){
-  data = savedTableData;
-}
-
 const tableHeadElement = document.getElementById("table-head");
 const tableBodyElement = document.getElementById("table-body");
 const previousButton = document.getElementById("previous-btn");
@@ -96,22 +89,25 @@ nextButton.addEventListener("click", () => {
 });
 
 pageNoText.innerText = currentPage;
+createTableHeader(userData);
+createTableBody(getPaginatedData(userData));
 
-const fetchTableData = async () => {
-  const response = await fetch(URL);
-  if (!response.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  const data = await response.json();
-  return data.slice(0, 200);
-};
 
-fetchTableData()
-  .then((data) => {
-    localStorage.setItem('tableData', JSON.stringify(data))
-    createTableHeader(data);
-    createTableBody(getPaginatedData(data));
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+// const fetchTableData = async () => {
+//   const response = await fetch(URL);
+//   if (!response.ok) {
+//     throw new Error("Failed to fetch data");
+//   }
+//   const data = await response.json();
+//   return data.slice(0, 200);
+// };
+
+// fetchTableData()
+//   .then((data) => {
+//     localStorage.setItem('tableData', JSON.stringify(data))
+//     createTableHeader(data);
+//     createTableBody(getPaginatedData(data));
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
