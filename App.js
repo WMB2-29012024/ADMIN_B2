@@ -14,19 +14,23 @@ const CardsList = () => {
 
   const handleCardCreateClick = () => {
     cardList.push({
-      user: "Sujal",
-      title: "Another card",
+      user: "",
+      title: "",
     });
     const newCardList = Array.from(cardList);
-    // const newCardList = [...cardList];
-    console.log({ cardList });
     setCardList(newCardList);
   };
 
   return (
     <div className="card-container">
-      {cardList.map((cardObject) => (
-        <TaskCard user={cardObject.user} title={cardObject.title} />
+      {console.log("in return")}
+
+      {cardList.map((cardObject, idx) => (
+        <TaskCard
+          idx={idx}
+          cardsListState={cardList}
+          cardsListSetter={setCardList}
+        />
       ))}
       <button onClick={handleCardCreateClick}>+ Create</button>
     </div>
@@ -42,11 +46,38 @@ const CardCreateButton = () => {
 };
 
 const TaskCard = (props) => {
-  const { user, title } = props;
+  const { cardsListState, cardsListSetter, idx } = props;
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleTitleInput = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const handleDescriptionInput = (e) => {
+    setDescription(e.target.value);
+  };
   return (
     <div className="task-card">
-      <div>{user}</div>
-      <div>{title}</div>
+      <div>
+        <div>{idx}</div>
+        <input
+          className="input"
+          onChange={handleTitleInput}
+          value={title}
+          placeholder={"Title"}
+          type="text"
+        />
+      </div>
+      <div>
+        <textarea
+          className="textarea"
+          onChange={handleDescriptionInput}
+          value={description}
+          placeholder={"Description"}
+        />
+        <button onClick={() => {}}>Submit</button>
+      </div>
     </div>
   );
 };
